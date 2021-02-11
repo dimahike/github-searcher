@@ -62,7 +62,7 @@ const HomePage = () => {
             {users.map((user, index) => (
               <Link
                 key={`${user.items[0].owner.login}_${index}`}
-                to={`/user/${user.items[0].owner.login}`}>
+                to={`/github-searcher/user/${user.items[0].owner.login}`}>
                 <div className="user row space-btw">
                   <div className="left">
                     <div className="sm-image">

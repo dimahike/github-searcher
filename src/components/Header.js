@@ -8,10 +8,10 @@ const Header = ({ theme, themeOnClick }) => {
     <header id="header">
       <div className="row space-btw">
         <div className="logo">
-          <Link to="/">RepoGit</Link>
+          <Link to="/github-searcher">RepoGit</Link>
         </div>
         <div className="theme-switcher" onClick={themeOnClick}>
-          {theme ? <i class="fas fa-moon"></i> : <i className="far fa-sun"></i>}
+          {theme ? <i className="fas fa-moon"></i> : <i className="far fa-sun"></i>}
         </div>
       </div>
     </header>

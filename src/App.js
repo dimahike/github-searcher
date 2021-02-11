@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Header from './components/Header';
 
 import HomePage from './pages/HomePage';
@@ -19,8 +19,11 @@ function App() {
         <div className="grid-container">
           <Header theme={theme} themeOnClick={themeHandler} />
           <main>
-            <Route path="/user/:username" component={UserPage} />
-            <Route path="/" component={HomePage} exact />
+            <Switch>
+              <Route path="/github-searcher" component={HomePage} exact />
+              <Route path="/github-searcher/user/:username" component={UserPage} exxact />
+              <Redirect to="/github-searcher" />
+            </Switch>
           </main>
           <footer> © {year} TODO LIST</footer>
         </div>
