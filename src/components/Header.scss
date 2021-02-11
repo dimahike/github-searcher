@@ -1,0 +1,22 @@
+@import '../variables.scss';
+
+#header {
+
+  a {
+    font-size: 2rem;  
+    font-weight: bold;
+    color: $white-grey;
+  }
+  a:hover {
+    color: $white-blue;
+  }
+
+  .theme-switcher {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .theme-switcher:hover {
+    color: $white-blue;
+  }
+
+}

@@ -1,0 +1,55 @@
+@import "../variables.scss";
+
+#user {
+  h1 {
+    text-align: center;
+  }
+  .header {
+    .lg-image {
+      margin: 2rem;
+      img {
+        max-height: 30rem;
+        max-width: 30rem;
+        border-radius: 1rem;
+      }
+    }
+    .description {
+      margin: 2rem;
+      div { 
+        margin: 1.5rem 0;
+        font-weight: bold;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .search {
+    margin: 6rem auto 4rem;
+  }
+
+  .repo-list {
+    .repo {
+      margin: 0;
+      border-bottom: 2px solid $dark-grey;
+      .left {
+        color: $dark-blue   
+      }
+      .right {
+     
+
+        h4 {
+          padding: 1rem;
+          span {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .header {
+      justify-content: center;
+    }
+  }
+}

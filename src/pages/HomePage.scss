@@ -1,0 +1,56 @@
+@import "../variables.scss";
+
+#home {
+  .title {
+    text-align: center;
+  }
+  .search {
+    max-width: 60rem;
+    margin: 5rem auto 2rem;
+  
+  
+    
+    // & > div {
+    //   display: flex;
+    //   flex-direction: column;
+    //   margin: 1rem;
+    //   label {
+    //     // display: none;
+    //     margin: 1rem 0;
+    //   }
+    //   input {
+    //     padding: 0.5rem 1rem;
+    //   }
+    // }
+    // & > div input:focus {
+    //   label {
+    //     display: inline;
+    //   }
+    // }
+  }
+
+  .user-list {
+    margin-top: 5rem;
+    .user {
+      margin-top: 2rem;
+      .left {
+        display: flex;
+        align-items: center;
+
+        .sm-image {
+          margin-right: 2rem;
+          img {
+            height: 5rem;
+            width: 5rem;
+          }
+        }
+      }
+      .right {
+      }
+      span {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

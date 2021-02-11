@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.field {
+  position: relative;
+  // border: 1px solid $white-grey
+  input {
+    background: 0;
+    border: 0;
+    outline: none;
+    width: 80vw;
+    max-width: 100%;
+    font-size: 1.5em;
+    transition: padding 0.3s 0.2s ease;
+  }
+
+  input:focus {
+    padding-bottom: 5px;
+  }
+  input:focus + .line:after {
+    transform: scaleX(1);
+  }
+
+  label:active {
+    background-color: tomato;
+  }
+  .line {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -8px;
+    background: #bdc3c7;
+  }
+  .line:after {
+    content: " ";
+    position: absolute;
+    float: right;
+    width: 100%;
+    height: 3px;
+    transform: scalex(0);
+    transition: transform 0.3s ease;
+    background: $white-blue;
+  }
+}
