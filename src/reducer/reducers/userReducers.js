@@ -11,7 +11,7 @@ import {
   USER_LIST_SUCCESS,
 } from '../constants/constants';
 
-export const userListReducer = (state = { loading: true }, action) => {
+export const userListReducer = (state = { loading: false }, action) => {
   switch (action.type) {
     case USER_LIST_REQUEST:
       return { loading: true };
@@ -24,7 +24,7 @@ export const userListReducer = (state = { loading: true }, action) => {
   }
 };
 
-export const usersReposReducer = (state = { loading: true, users: [] }, action) => {
+export const usersReposReducer = (state = { loading: false, users: [] }, action) => {
   switch (action.type) {
     case USERS_REPOS_REQUEST:
       return { loading: true };

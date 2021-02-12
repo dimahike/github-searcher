@@ -20,9 +20,9 @@ function App() {
           <Header theme={theme} themeOnClick={themeHandler} />
           <main>
             <Switch>
-              <Route path="/github-searcher" component={HomePage} exact />
-              <Route path="/github-searcher/user/:username" component={UserPage} exxact />
-              <Redirect to="/github-searcher" />
+              <Route path="/" component={HomePage} exact />
+              <Route path="/user/:username" component={UserPage} exxact />
+              <Redirect to="/" />
             </Switch>
           </main>
           <footer> © {year} TODO LIST</footer>

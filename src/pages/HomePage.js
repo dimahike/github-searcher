@@ -15,6 +15,9 @@ const HomePage = () => {
   const [timerId, setTimerId] = useState(false);
 
   const { loading, users, error } = useSelector((state) => state.usersRepos);
+  const { loading: loadingUserList, users: usersUserList, error: errorUserList } = useSelector(
+    (state) => state.userList,
+  );
 
   useEffect(() => {
     // action default user list
@@ -51,6 +54,8 @@ const HomePage = () => {
         <div className="search">
           <Field value={search} onChangeHandle={searchHandle} placeholder="Search For User" />
         </div>
+        {loadingUserList && <LoadingBox />}
+        {errorUserList && <MessageBox variant="danger">{errorUserList} </MessageBox>}
 
         {loading ? (
           <LoadingBox />
@@ -62,7 +67,7 @@ const HomePage = () => {
             {users.map((user, index) => (
               <Link
                 key={`${user.items[0].owner.login}_${index}`}
-                to={`/github-searcher/user/${user.items[0].owner.login}`}>
+                to={`/user/${user.items[0].owner.login}`}>
                 <div className="user row space-btw">
                   <div className="left">
                     <div className="sm-image">

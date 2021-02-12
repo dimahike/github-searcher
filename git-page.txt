@@ -1,0 +1,5 @@
+ "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+
+
+      // "homepage": "http://dimahie.github.io/github-searcher",
